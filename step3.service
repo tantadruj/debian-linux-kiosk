@@ -1,0 +1,8 @@
+[Unit]
+Before=network.target
+
+[Service]
+ExecStart=/usr/local/bin/step3.sh
+
+[Install]
+WantedBy=network.target
