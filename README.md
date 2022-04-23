@@ -1,6 +1,6 @@
 # Debian Linux Kiosk
 
-A setup process for public access computer(s). Possible uses are browsing the web and reading or editing documents - this includes the use of a USB key - if you allow it.
+A setup process for public access computer(s). Possible uses are browsing the web and reading or editing documents, this includes the use of a USB key - if you allow it.
 
 Intended for casual Linux users, such as myself.
 
@@ -10,7 +10,7 @@ This step assumes the computer has a password protected BIOS [password protectio
 
 This step assumes that, aside from the root user, there is an unprivileged user called *student*, but it can also be anything else, as long as you modify the *step1.sh* accordingly.
 
-Modifications to example values of the variables should be made if, for no other reason, to make it compatible with your network and to select your desired SSH port.
+Modifications to example values of the variables in *step1.sh* should be made if, for no other reason, to make it compatible with your network and to select your desired SSH port.
 
 Or you can simply opt for DHCP, but given the public access to the computers, it is better to assign them a static IP address. It is good to know which computer the death threats were being sent from. It also helps with any later management using Ansible and such.
 
@@ -26,7 +26,7 @@ Once you make all the modifications to your liking, as root, run the *step1.sh* 
 1. configure cron tasks for automatic shutdown
 1. configure auto-start for Openbox
 
-Openbox auto-start includes disabling the screen saver. From my experience it saves on time if you know a blank screen is trouble or not.
+Openbox auto-start includes disabling the screen saver. From my experience it is better if you know a blank screen is trouble or not.
 
 Once that is done, reset the system and proceed to the next step.
 
@@ -48,8 +48,8 @@ ObConf
 
 PCManFm Preferences
 
-- pull out desired app shortcuts on Desktop
-- rename shortcuts to your liking
+- pull out desired app shortcuts on Desktop [Brave browser, LibreOffice]
+- rename shortcuts to your liking [Internet, Office]
 - General: check don't ask options on launch executable file
 - Display: size of big icons 128
 - Layout: Show in Places: Home Folder only
@@ -138,10 +138,10 @@ Apply *step3.sh* manually, as root.
 
 ## Conclusion
 
-The system configured in this way should hopefully be more or less bulletproof. The user should not be able to do any sort of serious abuse. If you find the potential for a serious abuse please let me know.
+The system configured in this way should hopefully be more or less bulletproof. The user should not be able to abuse the system. If you find the potential for a serious abuse please let me know.
 
 The user can still change the names of shortcut icons on desktop, but that is not a detrimental problem, yet it is or can be an annoyance.
 
-There is also a question of data if you decide to permit the use of a USB key. You might want to consider limiting to where the user can write and or occasionally/regularly wipe the data. Issues may occur if you put too much limits on where the user may write.
+There is also a question of data if you decide to permit the use of a USB key. You might want to consider limiting to where the user can write and or occasionally/regularly wipe the data. Issues may occur if you put too many restraints on where the user may write.
 
 If you decide to disallow USB keys either properly secure the computer case or disable USB functionality in BIOS, but then have a motherboard with PS2 ports along with suitable mouse and keyboard.
