@@ -112,7 +112,7 @@ It assumes that, instead of just five, you have fifty or more such computers, wi
 
 `nano /etc/network/interfaces` ? No.
 
-It also assumes you have a MAC address for each computer stored in the file called *iplist*. See the file contents for example values.
+It also assumes that you have a MAC address for each computer stored in the file called *iplist*. See the file contents for example values.
 
 Get MAC address CLI command:
 
@@ -120,7 +120,7 @@ Get MAC address CLI command:
 
 Script *step3.sh* will check, on boot, if MAC address of the computer matches the provided IP in the *iplist*, based on computer's current IP, and if it does not, it will act accordingly.
 
-It will change the computer's IP, host name and hosts based on its MAC address, so you won't have to, so you can do multicast install using software such as Clonezilla.
+It will change the computer's IP, host name and hosts based on its MAC address, so you won't have to, so you can do multicast install using software such as Clonezilla. Hostname for 172.16.9.250 becomes st250 as in student250. If you do not want the *st* part or wish to replace it with something else modify the script to your liking.   
 
 Apply *step3.sh* manually, as root.
 
