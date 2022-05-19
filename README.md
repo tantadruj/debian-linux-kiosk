@@ -116,7 +116,7 @@ It also assumes that you have a MAC address for each computer stored in the file
 
 Get MAC address CLI command:
 
-`ip link show $ETH | awk '/ether/ {print $2}'`
+`ip link show $ETH | awk '/ether/ {print $2}'` where $ETH is `ls /sys/class/net | grep enp`
 
 Script *step3.sh* will check, on boot, if MAC address of the computer matches the provided IP in the *iplist*, based on computer's current IP, and if it does not, it will act accordingly.
 
